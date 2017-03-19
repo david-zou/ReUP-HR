@@ -24,8 +24,8 @@ class RedditTile extends React.Component {
       <div className="RedditTile">
         <h3>Top Reddit Posts</h3>
         <div className = 'redditPosts pre-scrollable'>
-          {this.state.posts.map((post) => 
-            <RedditPost data={post.data}/>
+          {this.state.posts.map((post, index) => 
+            <RedditPost key={index} data={post.data}/>
           )}
         </div>
       </div>
